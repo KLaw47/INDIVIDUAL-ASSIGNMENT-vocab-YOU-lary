@@ -1,4 +1,4 @@
-import renderToDOM from '../helpers/renderToDom';
+import renderToDom from '../helpers/renderToDom';
 
 const navbar = () => {
   const string = `
@@ -23,7 +23,7 @@ const navbar = () => {
   <button type="button" class="btn btn-primary">18</button>
 </div>`;
 
-  renderToDOM('#navbar', string);
+  renderToDom('#navbar', string);
 };
 
 export default navbar;
