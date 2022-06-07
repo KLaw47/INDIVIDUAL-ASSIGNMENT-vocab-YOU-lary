@@ -1,10 +1,10 @@
 import clearDom from '../../helpers/clearDom';
 import renderToDOM from '../../helpers/renderToDom';
 
-const addVocabForm = (obj = {}) => {
+const addVocabForm = (card = {}) => {
   clearDom();
   const string = `
-  <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'}" class="mb-4">
+  <form id="${card.firebaseKey ? `update-card--${card.firebaseKey}` : 'submit-card'}" class="mb-4">
     <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control" id="title">

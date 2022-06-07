@@ -1,5 +1,5 @@
 import { showCards } from '../cards';
-import { deleteCard } from '../../../api/vocabData';
+import { deleteCard, getSingleCard } from '../../../api/vocabData';
 import addVocabForm from '../form/addVocab';
 
 const domEvt = (uid) => {
@@ -9,11 +9,16 @@ const domEvt = (uid) => {
       if (window.confirm('Delete Card?')) {
         const [, firebaseKey] = e.target.id.split('--');
 
-        deleteCard(firebaseKey, uid).then((cardsArr) => showCards(cardsArr));
+        deleteCard(uid, firebaseKey).then((cardsArr) => showCards(cardsArr));
       }
     }
     if (e.target.id.includes('add-card-btn')) {
       addVocabForm(uid);
+    }
+    if (e.target.id.includes('update-card-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getSingleCard(firebaseKey).then((cardObj) => addVocabForm(uid, cardObj));
     }
   });
 };
