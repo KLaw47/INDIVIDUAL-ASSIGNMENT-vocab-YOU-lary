@@ -1,24 +1,29 @@
 import clearDom from '../../helpers/clearDom';
 import renderToDOM from '../../helpers/renderToDom';
 
-const addVocabForm = (uid, obj = {}) => {
+const addVocabForm = (obj = {}) => {
   clearDom();
   const string = `
-  <form>
+  <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'}" class="mb-4">
     <div class="mb-3">
-    <label for="title" class="form-label">Plant Name</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title">
     </div>
     <div class="mb-3">
-    <label for="description" class="form-label">Scientific Name</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="description" class="form-label">Description</label>
+    <input type="text" class="form-control" id="description">
   </div>
-  <div class="form-group" id="select-family">
-      </div>
+  <label for="lang">Language</label>
+      <select name="languages" id="languages">
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+    </select>
+      <button type="submit" class="btn btn-primary">Submit Card
+      </button>
   </form>`;
 
   renderToDOM('#form-content', string);
-  selectFamily(uid, `${obj.family}`);
 };
 
 export default addVocabForm;
