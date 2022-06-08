@@ -10,7 +10,7 @@ In this student assessment, you will be creating an application that allows user
 - Representing data as HTML
 - Usage of semantic HTML5 tags
 - Asynchronous Programming
-- Promises 
+- Promises
 
 ## REMINDER
 We are not looking for completion of all stretch goals, but are focused on you hitting MVP, although if you can make it work completely, then wahoo!
@@ -32,8 +32,8 @@ If you only get MVP complete, but display the above Core Skills and can demonstr
 Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
 
 ## Get Started
-Create issue tickets from the items below to help you get started. 
-- [ ] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
+Create issue tickets from the items below to help you get started.
+- [] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
 - [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
 - [ ] Use this template (webpack) to create the project on your github account
 - [ ] Make sure you are in your `workspace/foundations/exercises` directory
