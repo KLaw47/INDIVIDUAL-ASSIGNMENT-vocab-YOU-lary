@@ -1,4 +1,4 @@
-import { createVocab } from '../../../api/vocabData';
+import { createVocab, updateCard } from '../../../api/vocabData';
 import { showCards } from '../cards';
 
 const fromEvents = (uid) => {
@@ -12,6 +12,19 @@ const fromEvents = (uid) => {
         uid
       };
       createVocab(cardObj, uid).then((cardsArr) => showCards(cardsArr));
+    }
+
+    if (e.target.id.includes('update-book')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const cardObj = {
+        title: document.querySelector('#title').value,
+        description: document.querySelector('#description').value,
+        language: document.querySelector('#languages').value,
+        firebaseKey,
+        uid
+      };
+
+      updateCard(cardObj, uid).then(showCards);
     }
   });
 };
