@@ -46,10 +46,37 @@ const updateCard = (vocabCard) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getHtml = (uid) => new Promise((resolve, reject) => {
+  vocabCards(uid)
+    .then((cardsArr) => {
+      const htmlCards = cardsArr.filter((card) => card.language === 'HTML');
+      resolve(htmlCards);
+    }).catch((error) => reject(error));
+});
+
+const getJavascript = (uid) => new Promise((resolve, reject) => {
+  vocabCards(uid)
+    .then((cardsArr) => {
+      const javascriptCards = cardsArr.filter((card) => card.language === 'JavaScript');
+      resolve(javascriptCards);
+    }).catch((error) => reject(error));
+});
+
+const getCss = (uid) => new Promise((resolve, reject) => {
+  vocabCards(uid)
+    .then((cardsArr) => {
+      const cssCards = cardsArr.filter((card) => card.language === 'CSS');
+      resolve(cssCards);
+    }).catch((error) => reject(error));
+});
+
 export {
   vocabCards,
   createVocab,
   getSingleCard,
   deleteCard,
   updateCard,
+  getHtml,
+  getJavascript,
+  getCss,
 };
