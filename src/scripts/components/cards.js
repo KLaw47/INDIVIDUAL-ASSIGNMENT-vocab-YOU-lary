@@ -8,7 +8,7 @@ const noCards = () => {
 const showCards = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-card-btn">Add A Card</button>';
+  const btnString = '<button class="btn btn-light btn-lg mb-4" id="add-card-btn">Add A Card</button>';
 
   renderToDom('#button', btnString);
   if (array.length) {
@@ -22,7 +22,7 @@ const showCards = (array) => {
         <p>${card.language}</p>
         <hr>
         <i class="fas fa-edit btn btn-info" id="update-card--${card.firebaseKey}"></i>
-        <i class="btn btn-danger fas fa-trash-alt" id="delete-card-btn--${card.firebaseKey}"></i>
+        <i class="btn btn-light far fa-trash-alt" id="delete-card-btn--${card.firebaseKey}"></i>
         <p>${card.date}</p>
       </div>
     </div>

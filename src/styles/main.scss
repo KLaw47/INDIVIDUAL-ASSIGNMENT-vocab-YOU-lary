@@ -19,18 +19,35 @@ body {
   display: flex;
   margin-top: 50px;
 }
+form {
+  margin-top: 50px;
+}
 .cards {
   display: flex;
-  flex-flow: row
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Baloo Paaji 2', cursive;
 }
 .card {
   max-width:600px;
   max-height:350px;
-
+background-color: black;
+color: lightblue;
+border: lightblue, 5px, solid;
+border-radius: 30px;
+margin: 10px, 0;
 
 
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:20px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  }
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
