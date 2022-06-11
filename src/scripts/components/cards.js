@@ -1,15 +1,20 @@
 import clearDom from '../helpers/clearDom';
 import renderToDom from '../helpers/renderToDom';
 
+const noCards = () => {
+  document.querySelector('#cards').innerHTML = '<h1>No Cards</h1>';
+};
+
 const showCards = (array) => {
   clearDom();
 
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-card-btn">Add A Card</button>';
 
   renderToDom('#button', btnString);
-  let string = ' ';
-  array.forEach((card) => {
-    string += `
+  if (array.length) {
+    let string = ' ';
+    array.forEach((card) => {
+      string += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${card.title}</h5>
@@ -18,15 +23,15 @@ const showCards = (array) => {
         <hr>
         <i class="fas fa-edit btn btn-info" id="update-card--${card.firebaseKey}"></i>
         <i class="btn btn-danger fas fa-trash-alt" id="delete-card-btn--${card.firebaseKey}"></i>
+        <p>${card.date}</p>
       </div>
     </div>
     `;
-  });
-  renderToDom('#cards', string);
-};
-
-const noCards = () => {
-  document.querySelector('#cards').innerHTML = '<h1>No Cards</h1>';
+    });
+    renderToDom('#cards', string);
+  } else {
+    noCards();
+  }
 };
 
 export { showCards, noCards };

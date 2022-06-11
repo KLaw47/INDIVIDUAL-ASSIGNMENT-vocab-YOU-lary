@@ -2,12 +2,35 @@ import renderToDom from '../helpers/renderToDom';
 
 const navbar = () => {
   const string = `
-  <div class="btn-group" role="group" aria-label="Languages">
-  <button type="button" id="all-cards" class="btn btn-primary">All</button>
-  <button type="button" class="btn btn-primary">JavaScript</button>
-  <button type="button" class="btn btn-primary">HTML</button>
-  <button type="button" class="btn btn-primary">CSS</button>
-</div>`;
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
+  <div class="container-fluid">
+      <a class="navbar-brand title" href="#">VocabYOUlary</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="all-cards">
+              All Cards <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="javascript">JavaScript</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="css">CSS</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+        <div id="logout-button"></div>
+      </span>
+      </div>
+      </div>
+    </nav>`;
 
   renderToDom('#navbar', string);
 };

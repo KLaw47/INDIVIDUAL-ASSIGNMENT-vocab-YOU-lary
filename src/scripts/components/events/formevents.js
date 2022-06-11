@@ -9,12 +9,13 @@ const fromEvents = (uid) => {
         title: document.querySelector('#title').value,
         description: document.querySelector('#description').value,
         language: document.querySelector('#languages').value,
-        uid
+        uid,
+        date: new Date().toLocaleString()
       };
       createVocab(cardObj, uid).then((cardsArr) => showCards(cardsArr));
     }
 
-    if (e.target.id.includes('update-book')) {
+    if (e.target.id.includes('update-card')) {
       const [, firebaseKey] = e.target.id.split('--');
       const cardObj = {
         title: document.querySelector('#title').value,

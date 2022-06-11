@@ -15,10 +15,10 @@ const domEvt = (uid) => {
     if (e.target.id.includes('add-card-btn')) {
       addVocabForm(uid);
     }
-    if (e.target.id.includes('update-card-btn')) {
+    if (e.target.id.includes('update-card')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleCard(firebaseKey).then((cardObj) => addVocabForm(uid, cardObj));
+      getSingleCard(firebaseKey).then((cardObj) => addVocabForm(cardObj));
     }
   });
 };
