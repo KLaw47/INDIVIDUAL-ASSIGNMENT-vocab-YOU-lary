@@ -8,8 +8,7 @@ const signMeOut = () => {
 
 const logoutButton = () => {
   const domString = '<button id="google-auth" class="btn btn-light">Logout</button>';
-  document.querySelector('#google-auth').addEventListener('click', signMeOut);
   renderToDom('#logout-button', domString);
 };
 
-export default logoutButton;
+export { signMeOut, logoutButton };
