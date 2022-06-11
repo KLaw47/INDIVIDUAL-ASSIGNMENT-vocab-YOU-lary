@@ -60,17 +60,17 @@ Create issue tickets from the items below to help you get started.
 - [ x] Login and Logout of the application using Firebase Google Authentication
 - [ x] only see the vocabulary entries that they created
 - [x ] CREATE a vocabulary entry:
-  - [x] Title
+  - [x ] Title
   - [x ] Definition
   - [x ] Language/Tech
-  - [ ] Time submitted - Not on form. Handle in your JS
+  - [ x] Time submitted - Not on form. Handle in your JS
   - [ x] user ID - Not on form. Pull from User object.
 - [x ] READ THIER entries
 - [ ] UPDATE THEIR entries
 - [ x] DELETE THEIR entries
 - [ x] Filter by language/tech
 - [ ] Style your application using your own creativity!
-- [ ] No errors - linters should be clean
+- [ x] No errors - linters should be clean
 
 ## Stretch 1
 [Stretch 1 Wireframe](https://www.figma.com/file/yZE38QzpoUWELA22gGZJve/Stretch-1)

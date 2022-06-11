@@ -23,6 +23,7 @@ const showCards = (array) => {
         <hr>
         <i class="fas fa-edit btn btn-info" id="update-card--${card.firebaseKey}"></i>
         <i class="btn btn-danger fas fa-trash-alt" id="delete-card-btn--${card.firebaseKey}"></i>
+        <p>${card.date}</p>
       </div>
     </div>
     `;

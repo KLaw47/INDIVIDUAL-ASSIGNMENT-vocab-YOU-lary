@@ -3,8 +3,35 @@
 
 
 body {
-  background-color: antiquewhite;
-  color: brown;
-  text-align: center;
-  margin-top: 100px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  background-color: LightGray;
 }
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.navbar {
+  justify-content: space-around;
+}
+#main-content{
+  display: flex;
+
+}
+.cards {
+  display: flex;
+  flex-flow: row
+}
+.card {
+  max-width:600px;
+  max-height:350px;
+
+
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
