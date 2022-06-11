@@ -2,7 +2,7 @@ import renderToDOM from '../helpers/renderToDom';
 
 const dom = () => {
   const string = `
-  <div class="navbar" id="navbar"></div>\
+  <div class="navbar" id="navbar"></div>
   <div id="container">
     <div id="main-content">
       <div id="button"></div>

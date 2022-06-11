@@ -1,9 +1,12 @@
 import {
   getJavascript, getHtml, getCss, vocabCards
 } from '../../../api/vocabData';
+import signOut from '../../helpers/signOut';
 import { showCards } from '../cards';
 
 const navEvt = (uid) => {
+  document.querySelector('#logout-button')
+    .addEventListener('click', signOut);
   document.querySelector('#all-cards').addEventListener('click', () => {
     vocabCards(uid).then((cardsArr) => showCards(cardsArr));
   });
